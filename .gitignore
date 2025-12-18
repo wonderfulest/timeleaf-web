@@ -1,0 +1,78 @@
+# ============================
+# Dependencies
+# ============================
+node_modules/
+.pnp/
+.pnp.js
+
+# ============================
+# Build outputs
+# ============================
+dist/
+dist-ssr/
+build/
+coverage/
+
+# ============================
+# Vite / Vue cache
+# ============================
+.vite/
+.vite-ssr/
+.cache/
+
+# ============================
+# Environment variables
+# ============================
+.env
+.env.*
+!.env.example
+
+# ============================
+# Logs
+# ============================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============================
+# Editor / OS
+# ============================
+.DS_Store
+Thumbs.db
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+*.iml
+
+# ============================
+# TypeScript
+# ============================
+*.tsbuildinfo
+
+# ============================
+# ESLint
+# ============================
+.eslintcache
+
+# ============================
+# Stylelint
+# ============================
+.stylelintcache
+
+# ============================
+# Testing
+# ============================
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+
+# ============================
+# Temporary files
+# ============================
+*.log
+*.tmp
+*.temp

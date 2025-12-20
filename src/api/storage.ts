@@ -58,9 +58,16 @@ export async function uploadFile(params: { file: File; folder?: string; suffix?:
     throw new Error(prepared.msg || '上传失败')
   }
 
+  const uploadHeaders = new Headers(prepared.data.headers)
+  if (!uploadHeaders.has('Content-Type')) {
+    uploadHeaders.set('Content-Type', contentType)
+  } else if (uploadHeaders.get('Content-Type') !== contentType) {
+    uploadHeaders.set('Content-Type', contentType)
+  }
+
   const putResp = await fetch(prepared.data.uploadUrl, {
     method: prepared.data.method || 'PUT',
-    headers: prepared.data.headers,
+    headers: uploadHeaders,
     body: params.file
   })
 

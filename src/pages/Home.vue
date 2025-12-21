@@ -56,6 +56,8 @@ onMounted(async () => {
       <div style="display: flex; gap: 12px">
         <el-link href="/upload" :underline="false">快捷上传</el-link>
         <el-link href="/albums" :underline="false">成长册</el-link>
+        <el-link href="/recycle-bin" :underline="false">垃圾站</el-link>
+        <el-link href="/parent" :underline="false">家长</el-link>
         <el-link href="javascript:void(0)" :underline="false" @click="logout">退出</el-link>
       </div>
     </div>

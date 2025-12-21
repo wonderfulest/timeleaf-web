@@ -8,6 +8,8 @@ import Upload from '@/pages/Upload.vue'
 import Login from '@/pages/Login.vue'
 import Register from '@/pages/Register.vue'
 import ChildSelect from '@/pages/ChildSelect.vue'
+import RecycleBin from '@/pages/RecycleBin.vue'
+import ParentCenter from '@/pages/ParentCenter.vue'
 
 import { useUserStore } from '@/store/user'
 import { useChildStore } from '@/store/child'
@@ -18,7 +20,9 @@ const routes = [
   { path: '/register', name: 'register', component: Register },
   { path: '/children', name: 'childSelect', component: ChildSelect, meta: { requiresAuth: true } },
   { path: '/', name: 'home', component: Home, meta: { requiresAuth: true } },
+  { path: '/parent', name: 'parentCenter', component: ParentCenter, meta: { requiresAuth: true } },
   { path: '/upload', name: 'upload', component: Upload, meta: { requiresAuth: true } },
+  { path: '/recycle-bin', name: 'recycleBin', component: RecycleBin, meta: { requiresAuth: true } },
   { path: '/media/:id', name: 'mediaDetail', component: MediaDetail, meta: { requiresAuth: true } },
   { path: '/albums', name: 'albumList', component: AlbumList, meta: { requiresAuth: true } },
   { path: '/albums/:id/editor', name: 'albumEditor', component: AlbumEditor, meta: { requiresAuth: true } }

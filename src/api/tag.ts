@@ -20,7 +20,7 @@ export interface TagCreateDTO {
 }
 
 export async function listTags(): Promise<TagVO[]> {
-  const resp = await http<Result<TagVO[]>>('/api/admin/tag/list', {
+  const resp = await http<Result<TagVO[]>>('/api/tags/list', {
     method: 'GET'
   })
 
@@ -32,7 +32,7 @@ export async function listTags(): Promise<TagVO[]> {
 }
 
 export async function createTag(dto: TagCreateDTO): Promise<TagVO> {
-  const resp = await http<Result<TagVO>>('/api/admin/tag/create', {
+  const resp = await http<Result<TagVO>>('/api/tags/create', {
     method: 'POST',
     body: JSON.stringify(dto)
   })

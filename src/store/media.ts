@@ -16,7 +16,11 @@ export const useMediaStore = defineStore('media', {
         id: x.id,
         childId: x.childId,
         type: x.type as Media['type'],
-        fileUrl: x.filePath,
+        fileUrl: x.type === 'video' && x.webFilePath ? x.webFilePath : x.filePath,
+        originalFileUrl: x.originalFilePath,
+        webFileUrl: x.webFilePath,
+        transcodeStatus: x.transcodeStatus,
+        transcodeError: x.transcodeError,
         shootAt: x.shootAt,
         note: x.note
       }))

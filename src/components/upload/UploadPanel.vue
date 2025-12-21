@@ -113,6 +113,7 @@ async function saveOne(item: UploadItem) {
         childId,
         type: item.type,
         filePath: fileUrl,
+        size: item.file.size,
         fileExt: suffix,
         shootAt: item.shootAt,
         note: item.note
@@ -175,6 +176,7 @@ async function saveAll() {
       childId,
       type: item.type,
       filePath: fileUrl,
+      size: item.file.size,
       fileExt: suffix,
       shootAt: item.shootAt,
       note: item.note

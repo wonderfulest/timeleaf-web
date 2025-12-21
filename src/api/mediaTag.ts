@@ -17,7 +17,7 @@ export interface MediaTagCreateDTO {
 }
 
 export async function createMediaTag(dto: MediaTagCreateDTO): Promise<MediaTagVO> {
-  const resp = await http<Result<MediaTagVO>>('/api/admin/media-tag/create', {
+  const resp = await http<Result<MediaTagVO>>('/api/media-tags/create', {
     method: 'POST',
     body: JSON.stringify(dto)
   })
